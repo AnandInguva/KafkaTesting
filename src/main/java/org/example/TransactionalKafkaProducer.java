@@ -5,10 +5,13 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Properties;
 
 public class TransactionalKafkaProducer {
+    private static final Logger LOG = LoggerFactory.getLogger(TransactionalKafkaProducer.class);
 
     public static void main(String[] args) {
         // Kafka producer configuration settings
